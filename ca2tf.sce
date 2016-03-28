@@ -1,3 +1,10 @@
+
+//This function is used to get the coefficients of transfer function and  power complementary filter made using two coupled allpass filter
+//NAME:=PRANIT J. THAKUR
+//Function name:-ca2tf()
+//INPUTS:-d1(coefficient of denominator of allpass filter),d2(coefficient of denominator of allpass filter) and beta.
+//OUTPUTS:-b,q are coefficient of numerator of impulse response of coupled filter and power complementary filter and 'a' is denominator coeff of impulse response
+
 function [b,a,q]=ca2tf(d1,d2,beta)//d1&d2 are denominator coefficient of an allpass filter in the form 1+a1*z+a2*z^2.........
  
  if ~exists("beta","local") then  //checking if beta is passed in the calling or not
@@ -9,6 +16,7 @@ H2=(poly((flipdim(d2,2)),"z","coeff"))/(poly(d2,"z","coeff"))
 
 H=((conj(beta)*H1)+(beta*H2))/2//finding the impuse transform for the coupled filter
 
+//finding the power complementary filter
 if (isreal(d1)&isreal(d2)&(beta==1)) then
     G=(H1-H2)/2
 else
