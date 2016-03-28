@@ -29,5 +29,7 @@ num2=numer(G)
 q=coeff(num2)
 b=coeff(num1)
 a=coeff(den1)
+//NOTE:-In matlab the output is taken as real part of the coefficient of numerator and denominator polynomial
+//JUST KEEP IN MIND THE FORM OF H(z) I HAVE USED IS OPPOSITE TO MATLAB
 
 endfunction
