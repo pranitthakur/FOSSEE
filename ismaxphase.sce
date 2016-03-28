@@ -1,3 +1,9 @@
+//This function tells us if the given system is max phase system or not using its impulse response
+//NAME:=PRANIT J. THAKUR
+//Function name:-ismaxphase()
+//INPUTS:-"b,a"=numerator and denominator of impulse response of system
+//OUTPUTS:-"y"=boolean value, TRUE if it is a maxphase system
+
 function y=ismaxphase(b,a)//function to check if a given system is maximum phase system or not
                            //b and a are coefficient of the numerator and denominator resp.of impulse response of the system.
                            //NOTE:-the numerator and denominator are of form 1+a1*z+a2*z^2+a3*z^3........
