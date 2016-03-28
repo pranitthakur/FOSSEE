@@ -1,3 +1,9 @@
+//This function is used to get the filter that notch a value at a particular frequency w0
+//NAME:=PRANIT J. THAKUR
+//Function name:-iirnotch()
+//INPUTS:-w0=frequency of interest,"bandwidth "=the bandwidth ,we want at the log magnitude ="lv" 
+//OUTPUTS:-'num'=coefficient of numerator of filter and 'deno'=coefficient of denominator of filter
+
 function [num,deno]=iirnotch(w0,bandwidth,lv)
 //notch filter at w0 frequency
 
